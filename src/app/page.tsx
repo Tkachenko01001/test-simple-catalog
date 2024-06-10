@@ -1,5 +1,16 @@
-import CatalogList from "@/components/CatalogList";
+import type { Metadata } from 'next'
+import CatalogList from "@/components/CatalogList"
 import { Box, Typography } from "@mui/material"
+
+
+ 
+export const metadata: Metadata = {
+    title: 'Кращі товари 2024',
+    description: 'Шукаєте гаджети та іншу техніку? Перегляньте наш новий каталог',
+    keywords: ['найкращі товари', 'топ товари', 'рейтинг товарів'],
+    authors: [{ name: 'Денис Ткаченко', url: 'https://portfolioo-flax.vercel.app' }],
+    robots: 'index, follow',
+};
 
 const baseUrl = 'test-simple-catalog.vercel.app' || "http://localhost:3000";
 
