@@ -4,6 +4,8 @@ import { Typography, Container, Card, CardMedia, CardContent, Grid, Button } fro
 export const dynamic = 'force-static'
 export const revalidate = 20
 
+const baseUrl = 'test-simple-catalog.vercel.app' || "http://localhost:3000";
+
 type Props = {
   params: { id: string }
   searchParams: { [key: string]: string | string[] | undefined }
@@ -15,7 +17,7 @@ export async function generateMetadata(
 ): Promise<Metadata> {
   const id = params.id
 
-  const product = await fetch(`http://localhost:3000/api/products/${id}`).then((res) => res.json())
+  const product = await fetch(`https://${baseUrl}/api/products/${id}`).then((res) => res.json())
  
   const previousImages = (await parent).openGraph?.images || []
  
@@ -29,7 +31,7 @@ export async function generateMetadata(
 }
 
 const ProductDetails = async ({ params }: any) => {
-    const response = await fetch(`http://localhost:3000/api/products/${params.id}`);
+    const response = await fetch(`https://${baseUrl}/api/products/${params.id}`);
     
     if (response.status === 404) {
         return <Typography variant="h1">Товар не знайдено</Typography>;
