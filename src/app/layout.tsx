@@ -7,27 +7,17 @@ import NavMenu from "@/components/NavMenu";
 
 
 export const metadata: Metadata = {
-  openGraph: {
-    title: 'Купляй із задоволенням',
-    description: 'Товари для вашої душі',
-    url: 'https://test-simple-catalog.vercel.app',
-    siteName: 'simple catalog app',
-    images: [
-      {
-        url: 'https://png.pngtree.com/png-clipart/20200722/original/pngtree-chat-store-logo-design-inspiration-png-image_4945665.jpg',
-        width: 800,
-        height: 600,
-      },
-      {
-        url: 'https://png.pngtree.com/png-clipart/20200722/original/pngtree-chat-store-logo-design-inspiration-png-image_4945665.jpg',
-        width: 1800,
-        height: 1600,
-      },
-    ],
-    locale: 'uk_UA',
-    type: 'website',
+  title: {
+    default: 'Магазин "Задоволення"',
+    template: '%s - Магазин "Задоволення"',
   },
-}
+  description: 'Ласкаво просимо до нашого інтернет-магазину! У нас ви знайдете товари для вашої душі.',
+  openGraph: {
+    type: 'website',
+    locale: 'uk_UA',
+    siteName: 'Магазин Гаджетів',
+  },
+};
 
 export default function RootLayout({
   children,
