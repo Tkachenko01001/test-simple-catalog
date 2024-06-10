@@ -37,6 +37,33 @@ const ProductDetails = async ({ params }: any) => {
         return <Typography variant="h1">Товар не знайдено</Typography>;
     }
     const product = await response.json();
+
+    const productSchema = {
+        "@context": "https://schema.org/",
+        "@type": "Product",
+        "name": product.name,
+        "image": product.image,
+        "description": product.description,
+        "sku": product.sku,
+        "mpn": product.mpn,
+        "brand": {
+            "@type": "Brand",
+            "name": product.brand
+        },
+        "offers": {
+            "@type": "Offer",
+            "url": `https://${baseUrl}/product/${product.id}`,
+            "priceCurrency": "UAH",
+            "price": product.price,
+            "priceValidUntil": "2024-12-31",
+            "itemCondition": "https://schema.org/NewCondition",
+            "availability": "https://schema.org/InStock",
+            "seller": {
+                "@type": "Organization",
+                "name": "Магазин гаджетів"
+            }
+        }
+    }
     
     return (
         <Container maxWidth="md">
@@ -66,6 +93,9 @@ const ProductDetails = async ({ params }: any) => {
                     </Grid>
                 </CardContent>
             </Card>
+            <script type="application/ld+json">
+                {JSON.stringify(productSchema)}
+            </script>
         </Container>
     )
 }
