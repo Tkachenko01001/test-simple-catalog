@@ -8,8 +8,8 @@ import NavMenu from "@/components/NavMenu";
 
 export const metadata: Metadata = {
   title: {
-    default: 'Магазин "Задоволення"',
-    template: '%s - Магазин "Задоволення"',
+    default: 'Магазин сучасних гаджетів',
+    template: '%s - Магазин сучасних гаджетів',
   },
   description: 'Ласкаво просимо до нашого інтернет-магазину! У нас ви знайдете товари для вашої душі.',
   openGraph: {
