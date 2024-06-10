@@ -55,6 +55,14 @@ const theme = createTheme({
         }
         )
       }
+    },
+    MuiGrid: {
+      styleOverrides: {
+        root: () => ({
+          listStyleType: 'none'
+        }
+        )
+      }
     }
   },
 })

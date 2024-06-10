@@ -19,10 +19,10 @@ const CatalogList: React.FC<Props> = ({ products }) => {
     
     return (
         <Box>
-            <Grid container spacing={1}>
+            <Grid container component='ul' spacing={1}>
                 {products.slice(startIndex, endIndex).map(product => (
-                    <Grid item key={product.id} xs={12} sm={6} md={4} lg={2.4}>
-                        <CatalogListItem item={product} />
+                    <Grid component='li' item key={product.id} xs={12} sm={6} md={4} lg={2.4}>
+                        <CatalogListItem item={product} key={product.id} />
                     </Grid>
                 ))}
             </Grid>
