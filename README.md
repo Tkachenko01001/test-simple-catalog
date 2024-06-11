@@ -1,4 +1,26 @@
+# simple-catalog app
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+live page:
+https://test-simple-catalog.vercel.app
+
+
+Screenshot 1: Example of rich results in search engine results.
+![Screenshot 1](./images/rich-results-test.png)
+
+
+Screenshot 2: Lighthouse report for the catalog page.
+![Screenshot 2](./images/lighthouse-catalog.png)
+
+
+Screenshot 3: Lighthouse report for the one product page.
+![Screenshot 3](./images/lightehouse-one-product.png)
+
+
+## description
+
+A small mini-catalog project of working with ssr/ssg and metadata in next.js using app routing and material UI.
 
 ## Getting Started
 
